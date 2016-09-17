@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+{% include generic.head.html %}
+
+<body{% if page.section %} class="c-{{ page.section }}"{% endif%}>
+
+    {{ content }}
+
+    <!-- Page footer -->
+    {% include components.footer.html %}
+    <!-- End page footer -->
+
+    <!-- Footer javascript -->
+    {% include generic.javascript.html %}
+    <!-- End footer javascript -->
+
+</body>
+</html>
