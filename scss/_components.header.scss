@@ -1,0 +1,35 @@
+.c-header {
+  position: relative;
+}
+
+.c-header__main {
+  width: 100%;
+}
+
+.o-headeroverlay {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.c-header__title {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;
+
+  & span {
+    font-size: 30px;
+    color: white;
+  }
+}
+
+.c-header__event {
+  position: absolute;
+  right: 80px;
+  bottom: 40px;
+  width: 350px;
+
+  & * {
+    color: white;
+  }
+}

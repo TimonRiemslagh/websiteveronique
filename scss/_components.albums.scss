@@ -1,0 +1,29 @@
+.c-albums {
+  margin-top: 4rem;
+}
+
+.c-album {
+  & img {
+    transition: all 0.5s ease;
+  }
+
+  & img:hover {
+     transform:scale(1.15);
+  }
+
+  & h3 {
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 2rem;
+}
+
+.c-album__image {
+  overflow: hidden;
+  max-height: 196px;
+  margin-bottom: 1rem;
+}

@@ -6,9 +6,8 @@
 }
 
 .js-unslider {
-  height: 500px;
+  height: 600px;
   overflow: hidden !important;
-  margin-bottom: 2rem;
 }
 
 	.unslider {
@@ -17,7 +16,6 @@
   	text-align: center;
   	text-shadow: none;
     overflow: hidden !important;
-    margin: 4rem 0 !important;
 	}
 
 	.unslider-arrow {
@@ -50,7 +48,10 @@
 		}
 
 	.unslider-nav {
-
+    position: absolute;
+    bottom: 20px;
+    z-index: 3;
+    width: 100%;
 	}
 
 	.unslider-nav ol {
@@ -68,12 +69,12 @@
 			border-radius: 5px;
 			overflow: hidden;
 			text-indent: -999em;
-			border: 2px solid black;
+			border: 2px solid white;
 			cursor: pointer;
 			opacity: .4;
 		}
 		.unslider-nav ol li.unslider-active {
-			background: black;
+			background: white;
 			cursor: default;
 			opacity: 1;
 		}

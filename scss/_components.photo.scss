@@ -2,7 +2,20 @@
     Components: Photo
 */
 
-.c-photo--slider {
+.c-photo {
   width: 100%;
   height: auto;
+}
+
+.c-photo--slider {
+
+}
+
+.c-photo--event {
+
+  max-height: 400px;
+  width: 100%;
+  width: auto;
+  margin-bottom: 10px;
+
 }

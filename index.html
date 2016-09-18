@@ -4,20 +4,49 @@ title: Homepage
 section: home
 ---
 
-<div class="o-container">
-  <div class="c-row c-row--alpha">
-    <h1>Veronique Cauchie</h1>
+<div ng-controller="mainController">
+
+  <div class="c-header">
+    <div class="o-headeroverlay c-header__title">
+        <span>Veronique Cauchie</span>
+    </div>
+    <div class="c-header__main">
+      <div class="js-unslider">
+        <ul>
+          <li class="c-slider-item" ng-repeat="photo in sliderphotos"><img class="c-photo c-photo--slider" ng-src="{[{ photo }]}"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="o-headeroverlay c-header__event">
+      <img class="c-photo c-photo--event" ng-src="{[{upcomming.photo}]}">
+      <h3>{[{upcomming.desc.Date}]}</h3>
+      <p>{[{upcomming.desc.description}]}</p>
+    </div>
   </div>
-</div>
 
-<div class="js-unslider" ng-controller="mainController">
-  <ul>
-    <li class="c-slider-item" ng-repeat="photo in sliderphotos"><img class="c-photo c-photo--slider" ng-src="{[{ photo }]}" alt=""></li>
-  </ul>
-</div>
+  <div class="c-albums">
 
-<div class="o-container">
-  <div class="c-row c-row--alpha">
-    <h1>Veronique Cauchie</h1>
+    <div class="o-container">
+      <h1>Foto's</h1>
+    </div>
+
+    <div ng-repeat="subset in albumSubSets" class="o-container">
+        <div class="o-grid o-grid--gutter">
+            <div ng-repeat="album in subset" class="o-grid__item u-1-of-4-bp3">
+              <div class="c-album">
+                <div class="c-album__image">
+                  <img ng-src="{[{album.photos[0].photo}]}">
+                </div>
+
+                <h3>{[{album.summary.title}]}</h3>
+
+                <p>{[{album.summary.description}]}</p>
+
+              </div>
+
+            </div>
+        </div>
+    </div>
+
   </div>
 </div>
